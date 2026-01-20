@@ -1,33 +1,33 @@
-name: deployment exercise1
-on : push
-jobs : 
-    lint:
-        runs-on: ubuntu-latest
-        steps:
-            - name: get code
-              uses: actions/checkout@v3
-            - name: install dependencies
-              run: npm ci
-            - name: lint
-              run: npm run lint
+# name: deployment exercise1
+# on : push
+# jobs : 
+#     lint:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: get code
+#               uses: actions/checkout@v3
+#             - name: install dependencies
+#               run: npm ci
+#             - name: lint
+#               run: npm run lint
         
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: get code
-              uses: actions/checkout@v3
-            - name: install dependencies
-              run: npm ci
-            - name: Test Code
-              run: npm run test 
-    buildanddeploy: 
-        runs-on: ubuntu-latest
-        steps:
-            - name: get code
-              uses: actions/checkout@v3
-            - name: install dependencies
-              run: npm ci
-            - name: build project
-              run: npm run build
-            - name: deploy project
-              run: echo "deploying applications"
+#     test:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: get code
+#               uses: actions/checkout@v3
+#             - name: install dependencies
+#               run: npm ci
+#             - name: Test Code
+#               run: npm run test 
+#     buildanddeploy: 
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: get code
+#               uses: actions/checkout@v3
+#             - name: install dependencies
+#               run: npm ci
+#             - name: build project
+#               run: npm run build
+#             - name: deploy project
+#               run: echo "deploying applications"
